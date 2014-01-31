@@ -3,9 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Button x:Name="submitButton" Content="Submit" HorizontalAlignment="Left" Margin="432,288,0,0" VerticalAlignment="Top" Width="75" ToolTip="Submit input to chatbot" Click="OnClick"/>
-        <TextBox x:Name="inputTextBox" HorizontalAlignment="Left" Height="23" Margin="10,287,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="417"/>
-        <TextBlock x:Name="ConversationBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="272" Width="497"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="491*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="submitButton" Content="Submit" HorizontalAlignment="Left" Margin="405.828,288,0,0" VerticalAlignment="Top" Width="75" ToolTip="Submit input to chatbot" Click="OnClick" Grid.Column="1" IsDefault="True"/>
+        <TextBox x:Name="inputTextBox" HorizontalAlignment="Left" Height="23" Margin="10,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="417" Grid.ColumnSpan="2" ToolTip="Type text here for chatbot">
+            <TextBox.InputBindings>
+                <KeyBinding Key="Enter" Command="{Binding submitButton}"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <ScrollViewer x:Name="ConversationScroller" HorizontalAlignment="Left" Height="272" Margin="10,10,0,0" VerticalAlignment="Top" Width="497" Grid.ColumnSpan="2">
+            <TextBlock x:Name="ConversationBlock" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" Width="497"/>
+        </ScrollViewer>
 
     </Grid>
 </Window>

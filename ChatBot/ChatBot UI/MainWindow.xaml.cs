@@ -35,6 +35,8 @@ namespace ChatBot_UI
             Thread InputThread = new Thread(method);
             InputThread.Start(inputTextBox.Text);
 
+            AddInteraction(inputTextBox.Text);
+
             WaitForOutput();
         }
 
@@ -47,8 +49,14 @@ namespace ChatBot_UI
 
             if (mInteraction.Ready)
             {
-                ConversationBlock.Text = ConversationBlock.Text + "\n" + mInteraction.TakeOutput();
+                AddInteraction(mInteraction.TakeOutput());
             }
+        }
+
+        private void AddInteraction(string text)
+        {
+            ConversationBlock.Text = ConversationBlock.Text + "\n" + text;
+            ConversationScroller.ScrollToBottom();
         }
 
         private UIInteractions mInteraction;

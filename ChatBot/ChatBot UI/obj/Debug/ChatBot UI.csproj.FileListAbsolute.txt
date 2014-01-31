@@ -13,3 +13,18 @@ C:\Users\Jacob\ai\ChatBot\ChatBot UI\obj\Debug\ChatBot_UI.Properties.Resources.r
 C:\Users\Jacob\ai\ChatBot\ChatBot UI\obj\Debug\ChatBot UI.csproj.GenerateResource.Cache
 C:\Users\Jacob\ai\ChatBot\ChatBot UI\obj\Debug\ChatBot UI.exe
 C:\Users\Jacob\ai\ChatBot\ChatBot UI\obj\Debug\ChatBot UI.pdb
+C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot UI\bin\Debug\ChatBot UI.exe.config
+C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot UI\obj\Debug\ChatBot UI.exe
+C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot UI\obj\Debug\ChatBot UI.pdb
+C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot UI\bin\Debug\ChatBot UI.exe
+C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot UI\bin\Debug\ChatBot UI.pdb
+C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot UI\bin\Debug\ChatBot Interfaces.dll
+C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot UI\bin\Debug\ChatBot Interfaces.pdb
+C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot UI\obj\Debug\ChatBot UI.csprojResolveAssemblyReference.cache
+C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot UI\obj\Debug\MainWindow.baml
+C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot UI\obj\Debug\MainWindow.g.cs
+C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot UI\obj\Debug\App.g.cs
+C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot UI\obj\Debug\ChatBot UI_MarkupCompile.cache
+C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot UI\obj\Debug\ChatBot UI.g.resources
+C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot UI\obj\Debug\ChatBot_UI.Properties.Resources.resources
+C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot UI\obj\Debug\ChatBot UI.csproj.GenerateResource.Cache

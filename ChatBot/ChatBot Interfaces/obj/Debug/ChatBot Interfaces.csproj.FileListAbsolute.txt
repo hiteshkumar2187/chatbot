@@ -3,3 +3,8 @@ C:\Users\Jacob\ai\ChatBot\ChatBot Interfaces\bin\Debug\ChatBot Interfaces.dll
 C:\Users\Jacob\ai\ChatBot\ChatBot Interfaces\bin\Debug\ChatBot Interfaces.pdb
 C:\Users\Jacob\ai\ChatBot\ChatBot Interfaces\obj\Debug\ChatBot Interfaces.dll
 C:\Users\Jacob\ai\ChatBot\ChatBot Interfaces\obj\Debug\ChatBot Interfaces.pdb
+C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot Interfaces\bin\Debug\ChatBot Interfaces.dll
+C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot Interfaces\bin\Debug\ChatBot Interfaces.pdb
+C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot Interfaces\obj\Debug\ChatBot Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot Interfaces\obj\Debug\ChatBot Interfaces.dll
+C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot Interfaces\obj\Debug\ChatBot Interfaces.pdb
