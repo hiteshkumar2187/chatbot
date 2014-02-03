@@ -28,3 +28,18 @@ C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot UI\obj\Debug\ChatBot UI_MarkupCompile.
 C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot UI\obj\Debug\ChatBot UI.g.resources
 C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot UI\obj\Debug\ChatBot_UI.Properties.Resources.resources
 C:\Users\Jacob\ai\chatbot\ChatBot\ChatBot UI\obj\Debug\ChatBot UI.csproj.GenerateResource.Cache
+C:\Users\Dustin\Documents\Programming\C#\chatbot\ChatBot\ChatBot UI\bin\Debug\ChatBot UI.exe.config
+C:\Users\Dustin\Documents\Programming\C#\chatbot\ChatBot\ChatBot UI\obj\Debug\ChatBot UI.exe
+C:\Users\Dustin\Documents\Programming\C#\chatbot\ChatBot\ChatBot UI\obj\Debug\ChatBot UI.pdb
+C:\Users\Dustin\Documents\Programming\C#\chatbot\ChatBot\ChatBot UI\bin\Debug\ChatBot UI.exe
+C:\Users\Dustin\Documents\Programming\C#\chatbot\ChatBot\ChatBot UI\bin\Debug\ChatBot UI.pdb
+C:\Users\Dustin\Documents\Programming\C#\chatbot\ChatBot\ChatBot UI\bin\Debug\ChatBot Interfaces.dll
+C:\Users\Dustin\Documents\Programming\C#\chatbot\ChatBot\ChatBot UI\bin\Debug\ChatBot Interfaces.pdb
+C:\Users\Dustin\Documents\Programming\C#\chatbot\ChatBot\ChatBot UI\obj\Debug\ChatBot UI.csprojResolveAssemblyReference.cache
+C:\Users\Dustin\Documents\Programming\C#\chatbot\ChatBot\ChatBot UI\obj\Debug\MainWindow.baml
+C:\Users\Dustin\Documents\Programming\C#\chatbot\ChatBot\ChatBot UI\obj\Debug\MainWindow.g.cs
+C:\Users\Dustin\Documents\Programming\C#\chatbot\ChatBot\ChatBot UI\obj\Debug\App.g.cs
+C:\Users\Dustin\Documents\Programming\C#\chatbot\ChatBot\ChatBot UI\obj\Debug\ChatBot UI_MarkupCompile.cache
+C:\Users\Dustin\Documents\Programming\C#\chatbot\ChatBot\ChatBot UI\obj\Debug\ChatBot UI.g.resources
+C:\Users\Dustin\Documents\Programming\C#\chatbot\ChatBot\ChatBot UI\obj\Debug\ChatBot_UI.Properties.Resources.resources
+C:\Users\Dustin\Documents\Programming\C#\chatbot\ChatBot\ChatBot UI\obj\Debug\ChatBot UI.csproj.GenerateResource.Cache
