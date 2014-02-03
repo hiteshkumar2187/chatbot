@@ -18,21 +18,22 @@ bot: What is your favorite pizza restaurant?
 user: I like Dominos.
 ```
 Requirements
-=========
+-------------
 
 TODO
 
 Chatbot
-=========
+-------------
+
 TODO
 
 Architecture
-=========
+-------------
 
 TODO
 
 Testing
-=========
+-------------
 
 TODO
 
