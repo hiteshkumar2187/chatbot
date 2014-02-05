@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ChatBot_Interfaces;
 using System.Threading;
+using System.Windows.Forms;
 
 namespace ChatBot_UI
 {
@@ -27,6 +28,7 @@ namespace ChatBot_UI
             InitializeComponent();
 
             mInteraction = new DummyUIInteractions();
+            mInteraction.TakeOutput = GetOutput;
         }
 
         private void OnClick(object sender, RoutedEventArgs e)
@@ -35,28 +37,21 @@ namespace ChatBot_UI
             Thread InputThread = new Thread(method);
             InputThread.Start(inputTextBox.Text);
 
-            AddInteraction(inputTextBox.Text);
-
-            WaitForOutput();
+            AddInteraction("Person", inputTextBox.Text);
         }
 
-        private void WaitForOutput()
+        private void AddInteraction(string sender, string text)
         {
-            while (!mInteraction.Ready)
+            Dispatcher.Invoke((Action)(() =>
             {
-
-            }
-
-            if (mInteraction.Ready)
-            {
-                AddInteraction(mInteraction.TakeOutput());
-            }
+                ConversationBlock.Text = ConversationBlock.Text + "\n" + text;
+                ConversationScroller.ScrollToBottom();
+            }));
         }
 
-        private void AddInteraction(string text)
+        public void GetOutput(string output)
         {
-            ConversationBlock.Text = ConversationBlock.Text + "\n" + text;
-            ConversationScroller.ScrollToBottom();
+            AddInteraction("Chatbot", output);
         }
 
         private UIInteractions mInteraction;

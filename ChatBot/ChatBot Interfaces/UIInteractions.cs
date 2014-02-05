@@ -6,15 +6,12 @@ using System.Threading.Tasks;
 
 namespace ChatBot_Interfaces
 {
-    public interface UIInteractions
+    public abstract class UIInteractions
     {
-        void GiveInput(object input);
+        public abstract void GiveInput(object input);
 
-        string TakeOutput();
-
-        bool Ready
-        {
-            get;
-        }
+        public PullOutput TakeOutput;
     }
+
+    public delegate void PullOutput(string output);
 }
