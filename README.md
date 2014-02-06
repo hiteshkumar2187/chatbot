@@ -20,7 +20,7 @@ Sample Script
 user: Hello
 bot: Hello, What is your name?
 user: My name is Dave Bridges.
-bot: Nice to meet you dave.
+bot: Nice to meet you Dave Bridges.
 bot: Do you have any siblings?
 user: Yes, I have 2.
 bot: Are they brothers or sisters?
@@ -31,5 +31,13 @@ bot: What is your sisters name?
 bot: My sisters name is Caroline Bridges.
 bot: Do you have a favorite food?
 user: Yes, I like Pizza.
+bot: I've heard Pizza is good.
+user: What is my dads name?
+bot: I don't know. What is your fathers name?
+user: My father is named Charles Bridges.
+bot: That is a nice name.
+user: How many siblings do I have?
+bot: You have 2 siblings.
+user: What is my sisters name?
+bot: Your sister is named Caroline Bridges.
 ```
-
