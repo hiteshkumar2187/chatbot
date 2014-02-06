@@ -19,13 +19,17 @@ Sample Script
 ```
 user: Hello
 bot: Hello, What is your name?
-user: My name is Dave.
+user: My name is Dave Bridges.
 bot: Nice to meet you dave.
-bot: What is your favorite color?
-user: My favorite color is blue.
+bot: Do you have any siblings?
+user: Yes, I have 2.
+bot: Are they brothers or sisters?
+user: I have 1 brother and 1 sister.
+bot: What is your brothers name?
+user: My brothers name is Jeff Bridges.
+bot: What is your sisters name?
+bot: My sisters name is Caroline Bridges.
 bot: Do you have a favorite food?
 user: Yes, I like Pizza.
-bot: What is your favorite pizza restaurant?
-user: I like Dominos.
 ```
 
