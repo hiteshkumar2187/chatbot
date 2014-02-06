@@ -1,7 +1,18 @@
 Chatbot
 =========
 
-AI Chatbot Project for CST 426. This chatbot will chat with people with the objective of learning about the users. The bot will learn information about the person through conversation and be able to respond based upon that information.
+AI Chatbot Project for CST 426. This chatbot will chat with people with the objective of learning about the users.
+
+The application will operate with the intent to acquire and recall information about individuals it converses with. These details include but are not limited to:
+- Name
+- Age
+- Gender
+- Siblings
+- Parents
+- Friends
+- Occupation
+- Foods
+- Hobbies
 
 Sample Script
 -------------
@@ -17,23 +28,4 @@ user: Yes, I like Pizza.
 bot: What is your favorite pizza restaurant?
 user: I like Dominos.
 ```
-Requirements
--------------
-
-TODO
-
-Chatbot
--------------
-
-TODO
-
-Architecture
--------------
-
-TODO
-
-Testing
--------------
-
-TODO
 
