@@ -14,10 +14,24 @@ The application will operate with the intent to acquire and recall information a
 - Foods
 - Hobbies
 
+Sentence Format
+===
+Person
+--
+Query
+What is [MY || FIRST LAST] [NONE || MOTHER || FATHER || BROTHER || SISTER] [NAME || AGE || OCCUPATION]?
+How many [SIBLINGS || BROTHERS || SISTERS] [DO I] || [DOES FIRST LAST] have?
+
+Response
+[MY || FIRST LAST] [NONE || MOTHER || FATHER || SIBLINGS] [NAME || AGE || OCCUPATION] is [INPUT].
+
+BOT
+--
+What is [YOUR || FIRST LAST] [NONE || MOTHERS || FATHERS || SIBLINGS] [NAME || AGE || GENDER || OCCUPATION]?
+
 Sample Script
 -------------
 ```
-user: Hello
 bot: Hello, What is your name?
 user: My name is Dave Bridges.
 bot: Nice to meet you Dave Bridges.
