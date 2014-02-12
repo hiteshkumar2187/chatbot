@@ -1,4 +1,4 @@
-﻿namespace ChatBot_Interfaces
+﻿namespace ChatBot
 {
     partial class ChatBotLexer
     {
