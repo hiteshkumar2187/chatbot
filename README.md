@@ -31,6 +31,8 @@ BOT
 
 Sample Script
 -------------
+(Kept for archival purposes. Current sentence abstractions disallow niceties)
+
 ```
 bot: Hello, What is your name?
 user: My name is Dave Bridges.
