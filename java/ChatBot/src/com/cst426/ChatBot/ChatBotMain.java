@@ -1,3 +1,5 @@
+package com.cst426.ChatBot;
+
 /**
  * ChatBotMain.java
  *
@@ -5,8 +7,6 @@
  *
  * @author Dylan Gleason, dgleason8384 -at- gmail -dot- com
  */
-
-package com.cst426.ChatBot;
 
 import java.io.InputStream;
 import java.io.FileInputStream;
@@ -50,7 +50,7 @@ public class ChatBotMain
         ChatBotParser parser = new ChatBotParser(tokens);
 
         // Parse the tree starting at "line"
-        ParseTree tree = parser.line();
+        ParseTree tree = parser.prog();
 
         //
         // Create a new instance of the datastore and our ChatBotExprVisitor
@@ -62,5 +62,8 @@ public class ChatBotMain
 
         // visit the parse tree
         visitor.visit(tree);
+
+        // print out the Vocabulary
+        System.out.println( dataStore.getVocabulary().toString() );
     }
 }

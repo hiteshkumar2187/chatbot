@@ -4,6 +4,10 @@ grammar ChatBot;
  * Grammar rules
  */
 
+prog
+    : line+
+    ;
+
 line
 	: sentence EOL
 	;
@@ -12,7 +16,8 @@ sentence
     : np vp
     ;
 
-np  : pronoun
+np
+    : pronoun
 	| properNoun
 	| det nominal
 	;

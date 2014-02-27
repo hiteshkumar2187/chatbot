@@ -20,17 +20,6 @@ public interface ChatBotListener extends ParseTreeListener {
 	void exitDet(@NotNull ChatBotParser.DetContext ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link ChatBotParser#verb}.
-	 * @param ctx the parse tree
-	 */
-	void enterVerb(@NotNull ChatBotParser.VerbContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link ChatBotParser#verb}.
-	 * @param ctx the parse tree
-	 */
-	void exitVerb(@NotNull ChatBotParser.VerbContext ctx);
-
-	/**
 	 * Enter a parse tree produced by {@link ChatBotParser#np}.
 	 * @param ctx the parse tree
 	 */
@@ -40,17 +29,6 @@ public interface ChatBotListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitNp(@NotNull ChatBotParser.NpContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link ChatBotParser#noun}.
-	 * @param ctx the parse tree
-	 */
-	void enterNoun(@NotNull ChatBotParser.NounContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link ChatBotParser#noun}.
-	 * @param ctx the parse tree
-	 */
-	void exitNoun(@NotNull ChatBotParser.NounContext ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link ChatBotParser#pronoun}.
@@ -64,15 +42,15 @@ public interface ChatBotListener extends ParseTreeListener {
 	void exitPronoun(@NotNull ChatBotParser.PronounContext ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link ChatBotParser#properNoun}.
+	 * Enter a parse tree produced by {@link ChatBotParser#line}.
 	 * @param ctx the parse tree
 	 */
-	void enterProperNoun(@NotNull ChatBotParser.ProperNounContext ctx);
+	void enterLine(@NotNull ChatBotParser.LineContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ChatBotParser#properNoun}.
+	 * Exit a parse tree produced by {@link ChatBotParser#line}.
 	 * @param ctx the parse tree
 	 */
-	void exitProperNoun(@NotNull ChatBotParser.ProperNounContext ctx);
+	void exitLine(@NotNull ChatBotParser.LineContext ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link ChatBotParser#sentence}.
@@ -86,26 +64,15 @@ public interface ChatBotListener extends ParseTreeListener {
 	void exitSentence(@NotNull ChatBotParser.SentenceContext ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link ChatBotParser#line}.
+	 * Enter a parse tree produced by {@link ChatBotParser#nominal}.
 	 * @param ctx the parse tree
 	 */
-	void enterLine(@NotNull ChatBotParser.LineContext ctx);
+	void enterNominal(@NotNull ChatBotParser.NominalContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ChatBotParser#line}.
+	 * Exit a parse tree produced by {@link ChatBotParser#nominal}.
 	 * @param ctx the parse tree
 	 */
-	void exitLine(@NotNull ChatBotParser.LineContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link ChatBotParser#pp}.
-	 * @param ctx the parse tree
-	 */
-	void enterPp(@NotNull ChatBotParser.PpContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link ChatBotParser#pp}.
-	 * @param ctx the parse tree
-	 */
-	void exitPp(@NotNull ChatBotParser.PpContext ctx);
+	void exitNominal(@NotNull ChatBotParser.NominalContext ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link ChatBotParser#vp}.
@@ -119,17 +86,6 @@ public interface ChatBotListener extends ParseTreeListener {
 	void exitVp(@NotNull ChatBotParser.VpContext ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link ChatBotParser#nominal}.
-	 * @param ctx the parse tree
-	 */
-	void enterNominal(@NotNull ChatBotParser.NominalContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link ChatBotParser#nominal}.
-	 * @param ctx the parse tree
-	 */
-	void exitNominal(@NotNull ChatBotParser.NominalContext ctx);
-
-	/**
 	 * Enter a parse tree produced by {@link ChatBotParser#preposition}.
 	 * @param ctx the parse tree
 	 */
@@ -139,4 +95,59 @@ public interface ChatBotListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitPreposition(@NotNull ChatBotParser.PrepositionContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link ChatBotParser#prog}.
+	 * @param ctx the parse tree
+	 */
+	void enterProg(@NotNull ChatBotParser.ProgContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ChatBotParser#prog}.
+	 * @param ctx the parse tree
+	 */
+	void exitProg(@NotNull ChatBotParser.ProgContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link ChatBotParser#verb}.
+	 * @param ctx the parse tree
+	 */
+	void enterVerb(@NotNull ChatBotParser.VerbContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ChatBotParser#verb}.
+	 * @param ctx the parse tree
+	 */
+	void exitVerb(@NotNull ChatBotParser.VerbContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link ChatBotParser#noun}.
+	 * @param ctx the parse tree
+	 */
+	void enterNoun(@NotNull ChatBotParser.NounContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ChatBotParser#noun}.
+	 * @param ctx the parse tree
+	 */
+	void exitNoun(@NotNull ChatBotParser.NounContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link ChatBotParser#properNoun}.
+	 * @param ctx the parse tree
+	 */
+	void enterProperNoun(@NotNull ChatBotParser.ProperNounContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ChatBotParser#properNoun}.
+	 * @param ctx the parse tree
+	 */
+	void exitProperNoun(@NotNull ChatBotParser.ProperNounContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link ChatBotParser#pp}.
+	 * @param ctx the parse tree
+	 */
+	void enterPp(@NotNull ChatBotParser.PpContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ChatBotParser#pp}.
+	 * @param ctx the parse tree
+	 */
+	void exitPp(@NotNull ChatBotParser.PpContext ctx);
 }

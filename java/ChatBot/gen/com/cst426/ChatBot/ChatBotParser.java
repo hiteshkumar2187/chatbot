@@ -28,11 +28,11 @@ public class ChatBotParser extends Parser {
 		"'school'", "'eat'", "LIKE"
 	};
 	public static final int
-		RULE_line = 0, RULE_sentence = 1, RULE_np = 2, RULE_nominal = 3, RULE_vp = 4, 
-		RULE_pp = 5, RULE_pronoun = 6, RULE_properNoun = 7, RULE_preposition = 8, 
-		RULE_det = 9, RULE_verb = 10, RULE_noun = 11;
+		RULE_prog = 0, RULE_line = 1, RULE_sentence = 2, RULE_np = 3, RULE_nominal = 4, 
+		RULE_vp = 5, RULE_pp = 6, RULE_pronoun = 7, RULE_properNoun = 8, RULE_preposition = 9, 
+		RULE_det = 10, RULE_verb = 11, RULE_noun = 12;
 	public static final String[] ruleNames = {
-		"line", "sentence", "np", "nominal", "vp", "pp", "pronoun", "properNoun", 
+		"prog", "line", "sentence", "np", "nominal", "vp", "pp", "pronoun", "properNoun", 
 		"preposition", "det", "verb", "noun"
 	};
 
@@ -55,6 +55,65 @@ public class ChatBotParser extends Parser {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
+	public static class ProgContext extends ParserRuleContext {
+		public LineContext line(int i) {
+			return getRuleContext(LineContext.class,i);
+		}
+		public List<LineContext> line() {
+			return getRuleContexts(LineContext.class);
+		}
+		public ProgContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_prog; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ChatBotListener ) ((ChatBotListener)listener).enterProg(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ChatBotListener ) ((ChatBotListener)listener).exitProg(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ChatBotVisitor ) return ((ChatBotVisitor<? extends T>)visitor).visitProg(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final ProgContext prog() throws RecognitionException {
+		ProgContext _localctx = new ProgContext(_ctx, getState());
+		enterRule(_localctx, 0, RULE_prog);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(27); 
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			do {
+				{
+				{
+				setState(26); line();
+				}
+				}
+				setState(29); 
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << I) | (1L << YOU) | (1L << HE) | (1L << SHE) | (1L << THEY) | (1L << IT) | (1L << JACOB) | (1L << DUSTIN) | (1L << DYLAN) | (1L << BOT) | (1L << THE) | (1L << ALL) | (1L << A) | (1L << SOME) | (1L << WHICH) | (1L << THIS) | (1L << THAT) | (1L << BOTH) | (1L << MY) | (1L << YOUR))) != 0) );
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
 	public static class LineContext extends ParserRuleContext {
 		public SentenceContext sentence() {
 			return getRuleContext(SentenceContext.class,0);
@@ -81,12 +140,12 @@ public class ChatBotParser extends Parser {
 
 	public final LineContext line() throws RecognitionException {
 		LineContext _localctx = new LineContext(_ctx, getState());
-		enterRule(_localctx, 0, RULE_line);
+		enterRule(_localctx, 2, RULE_line);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(24); sentence();
-			setState(25); match(EOL);
+			setState(31); sentence();
+			setState(32); match(EOL);
 			}
 		}
 		catch (RecognitionException re) {
@@ -128,12 +187,12 @@ public class ChatBotParser extends Parser {
 
 	public final SentenceContext sentence() throws RecognitionException {
 		SentenceContext _localctx = new SentenceContext(_ctx, getState());
-		enterRule(_localctx, 2, RULE_sentence);
+		enterRule(_localctx, 4, RULE_sentence);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(27); np();
-			setState(28); vp();
+			setState(34); np();
+			setState(35); vp();
 			}
 		}
 		catch (RecognitionException re) {
@@ -181,9 +240,9 @@ public class ChatBotParser extends Parser {
 
 	public final NpContext np() throws RecognitionException {
 		NpContext _localctx = new NpContext(_ctx, getState());
-		enterRule(_localctx, 4, RULE_np);
+		enterRule(_localctx, 6, RULE_np);
 		try {
-			setState(35);
+			setState(42);
 			switch (_input.LA(1)) {
 			case I:
 			case YOU:
@@ -193,7 +252,7 @@ public class ChatBotParser extends Parser {
 			case IT:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(30); pronoun();
+				setState(37); pronoun();
 				}
 				break;
 			case JACOB:
@@ -202,7 +261,7 @@ public class ChatBotParser extends Parser {
 			case BOT:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(31); properNoun();
+				setState(38); properNoun();
 				}
 				break;
 			case THE:
@@ -217,8 +276,8 @@ public class ChatBotParser extends Parser {
 			case YOUR:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(32); det();
-				setState(33); nominal();
+				setState(39); det();
+				setState(40); nominal();
 				}
 				break;
 			default:
@@ -264,22 +323,22 @@ public class ChatBotParser extends Parser {
 
 	public final NominalContext nominal() throws RecognitionException {
 		NominalContext _localctx = new NominalContext(_ctx, getState());
-		enterRule(_localctx, 6, RULE_nominal);
+		enterRule(_localctx, 8, RULE_nominal);
 		try {
-			setState(41);
-			switch ( getInterpreter().adaptivePredict(_input,1,_ctx) ) {
+			setState(48);
+			switch ( getInterpreter().adaptivePredict(_input,2,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(37); noun();
-				setState(38); nominal();
+				setState(44); noun();
+				setState(45); nominal();
 				}
 				break;
 
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(40); noun();
+				setState(47); noun();
 				}
 				break;
 			}
@@ -326,39 +385,39 @@ public class ChatBotParser extends Parser {
 
 	public final VpContext vp() throws RecognitionException {
 		VpContext _localctx = new VpContext(_ctx, getState());
-		enterRule(_localctx, 8, RULE_vp);
+		enterRule(_localctx, 10, RULE_vp);
 		try {
-			setState(54);
-			switch ( getInterpreter().adaptivePredict(_input,2,_ctx) ) {
+			setState(61);
+			switch ( getInterpreter().adaptivePredict(_input,3,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(43); verb();
+				setState(50); verb();
 				}
 				break;
 
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(44); verb();
-				setState(45); np();
+				setState(51); verb();
+				setState(52); np();
 				}
 				break;
 
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(47); verb();
-				setState(48); np();
-				setState(49); pp();
+				setState(54); verb();
+				setState(55); np();
+				setState(56); pp();
 				}
 				break;
 
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(51); verb();
-				setState(52); pp();
+				setState(58); verb();
+				setState(59); pp();
 				}
 				break;
 			}
@@ -402,12 +461,12 @@ public class ChatBotParser extends Parser {
 
 	public final PpContext pp() throws RecognitionException {
 		PpContext _localctx = new PpContext(_ctx, getState());
-		enterRule(_localctx, 10, RULE_pp);
+		enterRule(_localctx, 12, RULE_pp);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(56); preposition();
-			setState(57); np();
+			setState(63); preposition();
+			setState(64); np();
 			}
 		}
 		catch (RecognitionException re) {
@@ -449,12 +508,12 @@ public class ChatBotParser extends Parser {
 
 	public final PronounContext pronoun() throws RecognitionException {
 		PronounContext _localctx = new PronounContext(_ctx, getState());
-		enterRule(_localctx, 12, RULE_pronoun);
+		enterRule(_localctx, 14, RULE_pronoun);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(59);
+			setState(66);
 			_la = _input.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << I) | (1L << YOU) | (1L << HE) | (1L << SHE) | (1L << THEY) | (1L << IT))) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -499,12 +558,12 @@ public class ChatBotParser extends Parser {
 
 	public final ProperNounContext properNoun() throws RecognitionException {
 		ProperNounContext _localctx = new ProperNounContext(_ctx, getState());
-		enterRule(_localctx, 14, RULE_properNoun);
+		enterRule(_localctx, 16, RULE_properNoun);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(61);
+			setState(68);
 			_la = _input.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << JACOB) | (1L << DUSTIN) | (1L << DYLAN) | (1L << BOT))) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -555,12 +614,12 @@ public class ChatBotParser extends Parser {
 
 	public final PrepositionContext preposition() throws RecognitionException {
 		PrepositionContext _localctx = new PrepositionContext(_ctx, getState());
-		enterRule(_localctx, 16, RULE_preposition);
+		enterRule(_localctx, 18, RULE_preposition);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(63);
+			setState(70);
 			_la = _input.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << IN) | (1L << ON) | (1L << FOR) | (1L << TO) | (1L << BY) | (1L << WITH) | (1L << AT) | (1L << OF) | (1L << FROM) | (1L << AS))) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -611,12 +670,12 @@ public class ChatBotParser extends Parser {
 
 	public final DetContext det() throws RecognitionException {
 		DetContext _localctx = new DetContext(_ctx, getState());
-		enterRule(_localctx, 18, RULE_det);
+		enterRule(_localctx, 20, RULE_det);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(65);
+			setState(72);
 			_la = _input.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << THE) | (1L << ALL) | (1L << A) | (1L << SOME) | (1L << WHICH) | (1L << THIS) | (1L << THAT) | (1L << BOTH) | (1L << MY) | (1L << YOUR))) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -659,12 +718,12 @@ public class ChatBotParser extends Parser {
 
 	public final VerbContext verb() throws RecognitionException {
 		VerbContext _localctx = new VerbContext(_ctx, getState());
-		enterRule(_localctx, 20, RULE_verb);
+		enterRule(_localctx, 22, RULE_verb);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(67);
+			setState(74);
 			_la = _input.LA(1);
 			if ( !(_la==EAT || _la==LIKE) ) {
 			_errHandler.recoverInline(this);
@@ -707,12 +766,12 @@ public class ChatBotParser extends Parser {
 
 	public final NounContext noun() throws RecognitionException {
 		NounContext _localctx = new NounContext(_ctx, getState());
-		enterRule(_localctx, 22, RULE_noun);
+		enterRule(_localctx, 24, RULE_noun);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(69);
+			setState(76);
 			_la = _input.LA(1);
 			if ( !(_la==PIZZA || _la==SCHOOL) ) {
 			_errHandler.recoverInline(this);
@@ -732,24 +791,26 @@ public class ChatBotParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\'J\4\2\t\2\4\3\t"+
+		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\'Q\4\2\t\2\4\3\t"+
 		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4"+
-		"\f\t\f\4\r\t\r\3\2\3\2\3\2\3\3\3\3\3\3\3\4\3\4\3\4\3\4\3\4\5\4&\n\4\3"+
-		"\5\3\5\3\5\3\5\5\5,\n\5\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\5"+
-		"\69\n\6\3\7\3\7\3\7\3\b\3\b\3\t\3\t\3\n\3\n\3\13\3\13\3\f\3\f\3\r\3\r"+
-		"\3\r\2\2\16\2\4\6\b\n\f\16\20\22\24\26\30\2\b\3\2\6\13\3\2\f\17\3\2\20"+
-		"\31\3\2\32#\3\2&\'\3\2$%C\2\32\3\2\2\2\4\35\3\2\2\2\6%\3\2\2\2\b+\3\2"+
-		"\2\2\n8\3\2\2\2\f:\3\2\2\2\16=\3\2\2\2\20?\3\2\2\2\22A\3\2\2\2\24C\3\2"+
-		"\2\2\26E\3\2\2\2\30G\3\2\2\2\32\33\5\4\3\2\33\34\7\3\2\2\34\3\3\2\2\2"+
-		"\35\36\5\6\4\2\36\37\5\n\6\2\37\5\3\2\2\2 &\5\16\b\2!&\5\20\t\2\"#\5\24"+
-		"\13\2#$\5\b\5\2$&\3\2\2\2% \3\2\2\2%!\3\2\2\2%\"\3\2\2\2&\7\3\2\2\2\'"+
-		"(\5\30\r\2()\5\b\5\2),\3\2\2\2*,\5\30\r\2+\'\3\2\2\2+*\3\2\2\2,\t\3\2"+
-		"\2\2-9\5\26\f\2./\5\26\f\2/\60\5\6\4\2\609\3\2\2\2\61\62\5\26\f\2\62\63"+
-		"\5\6\4\2\63\64\5\f\7\2\649\3\2\2\2\65\66\5\26\f\2\66\67\5\f\7\2\679\3"+
-		"\2\2\28-\3\2\2\28.\3\2\2\28\61\3\2\2\28\65\3\2\2\29\13\3\2\2\2:;\5\22"+
-		"\n\2;<\5\6\4\2<\r\3\2\2\2=>\t\2\2\2>\17\3\2\2\2?@\t\3\2\2@\21\3\2\2\2"+
-		"AB\t\4\2\2B\23\3\2\2\2CD\t\5\2\2D\25\3\2\2\2EF\t\6\2\2F\27\3\2\2\2GH\t"+
-		"\7\2\2H\31\3\2\2\2\5%+8";
+		"\f\t\f\4\r\t\r\4\16\t\16\3\2\6\2\36\n\2\r\2\16\2\37\3\3\3\3\3\3\3\4\3"+
+		"\4\3\4\3\5\3\5\3\5\3\5\3\5\5\5-\n\5\3\6\3\6\3\6\3\6\5\6\63\n\6\3\7\3\7"+
+		"\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\5\7@\n\7\3\b\3\b\3\b\3\t\3\t\3\n"+
+		"\3\n\3\13\3\13\3\f\3\f\3\r\3\r\3\16\3\16\3\16\2\2\17\2\4\6\b\n\f\16\20"+
+		"\22\24\26\30\32\2\b\3\2\6\13\3\2\f\17\3\2\20\31\3\2\32#\3\2&\'\3\2$%J"+
+		"\2\35\3\2\2\2\4!\3\2\2\2\6$\3\2\2\2\b,\3\2\2\2\n\62\3\2\2\2\f?\3\2\2\2"+
+		"\16A\3\2\2\2\20D\3\2\2\2\22F\3\2\2\2\24H\3\2\2\2\26J\3\2\2\2\30L\3\2\2"+
+		"\2\32N\3\2\2\2\34\36\5\4\3\2\35\34\3\2\2\2\36\37\3\2\2\2\37\35\3\2\2\2"+
+		"\37 \3\2\2\2 \3\3\2\2\2!\"\5\6\4\2\"#\7\3\2\2#\5\3\2\2\2$%\5\b\5\2%&\5"+
+		"\f\7\2&\7\3\2\2\2\'-\5\20\t\2(-\5\22\n\2)*\5\26\f\2*+\5\n\6\2+-\3\2\2"+
+		"\2,\'\3\2\2\2,(\3\2\2\2,)\3\2\2\2-\t\3\2\2\2./\5\32\16\2/\60\5\n\6\2\60"+
+		"\63\3\2\2\2\61\63\5\32\16\2\62.\3\2\2\2\62\61\3\2\2\2\63\13\3\2\2\2\64"+
+		"@\5\30\r\2\65\66\5\30\r\2\66\67\5\b\5\2\67@\3\2\2\289\5\30\r\29:\5\b\5"+
+		"\2:;\5\16\b\2;@\3\2\2\2<=\5\30\r\2=>\5\16\b\2>@\3\2\2\2?\64\3\2\2\2?\65"+
+		"\3\2\2\2?8\3\2\2\2?<\3\2\2\2@\r\3\2\2\2AB\5\24\13\2BC\5\b\5\2C\17\3\2"+
+		"\2\2DE\t\2\2\2E\21\3\2\2\2FG\t\3\2\2G\23\3\2\2\2HI\t\4\2\2I\25\3\2\2\2"+
+		"JK\t\5\2\2K\27\3\2\2\2LM\t\6\2\2M\31\3\2\2\2NO\t\7\2\2O\33\3\2\2\2\6\37"+
+		",\62?";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

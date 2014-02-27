@@ -1,3 +1,5 @@
+package com.cst426.ChatBot;
+
 /**
  * ChatBotExprVisitor.java
  *
@@ -7,15 +9,13 @@
  * @author Dylan Gleason, dgleason8384 -at- gmail -dot- com
  */
 
-package com.cst426.ChatBot;
-
 public class ChatBotExprVisitor extends ChatBotBaseVisitor<String>
 {
     private DataStore _dataStore;
 
     /**
-     * Constructor
-     * @param dataStore a reference to the partsOfSpeech for our knowledge store
+     * constructor - binds the datastore to this object
+     * @param dataStore reference
      */
     public ChatBotExprVisitor(DataStore dataStore)
     {
@@ -32,7 +32,12 @@ public class ChatBotExprVisitor extends ChatBotBaseVisitor<String>
     public String visitVerb(ChatBotParser.VerbContext ctx)
     {
         String word = ctx.getText();
-        _dataStore.addVerb(word);
+
+        if ( !_dataStore.getVocabulary().inVocabulary(word) )
+        {
+            _dataStore.getVocabulary().addVerb(word, "");
+        }
+
         return "";
     }
 
@@ -46,7 +51,12 @@ public class ChatBotExprVisitor extends ChatBotBaseVisitor<String>
     public String visitNoun(ChatBotParser.NounContext ctx)
     {
         String word = ctx.getText();
-        _dataStore.addNoun(word);
+
+        if ( !_dataStore.getVocabulary().inVocabulary(word) )
+        {
+            _dataStore.getVocabulary().addNoun(word, "");
+        }
+
         return "";
     }
 
@@ -60,7 +70,12 @@ public class ChatBotExprVisitor extends ChatBotBaseVisitor<String>
     public String visitPronoun(ChatBotParser.PronounContext ctx)
     {
         String word = ctx.getText();
-        _dataStore.addPronoun(word);
+
+        if (!_dataStore.getVocabulary().inVocabulary(word) )
+        {
+            _dataStore.getVocabulary().addPronoun(word, "");
+        }
+
         return "";
     }
 
@@ -74,7 +89,12 @@ public class ChatBotExprVisitor extends ChatBotBaseVisitor<String>
     public String visitProperNoun(ChatBotParser.ProperNounContext ctx)
     {
         String word = ctx.getText();
-        _dataStore.addProperNoun(word);
+
+        if ( !_dataStore.getVocabulary().inVocabulary(word) )
+        {
+            _dataStore.getVocabulary().addProperNoun(word, "");
+        }
+
         return "";
     }
 
@@ -88,7 +108,12 @@ public class ChatBotExprVisitor extends ChatBotBaseVisitor<String>
     public String visitDet(ChatBotParser.DetContext ctx)
     {
         String word = ctx.getText();
-        _dataStore.addDeterminer(word);
+
+        if ( !_dataStore.getVocabulary().inVocabulary(word) )
+        {
+            _dataStore.getVocabulary().addDeterminer(word, "");
+        }
+
         return "";
     }
 }

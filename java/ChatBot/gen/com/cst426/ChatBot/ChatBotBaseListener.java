@@ -30,19 +30,6 @@ public class ChatBotBaseListener implements ChatBotListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterVerb(@NotNull ChatBotParser.VerbContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitVerb(@NotNull ChatBotParser.VerbContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterNp(@NotNull ChatBotParser.NpContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -50,19 +37,6 @@ public class ChatBotBaseListener implements ChatBotListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitNp(@NotNull ChatBotParser.NpContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterNoun(@NotNull ChatBotParser.NounContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitNoun(@NotNull ChatBotParser.NounContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
@@ -82,13 +56,13 @@ public class ChatBotBaseListener implements ChatBotListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterProperNoun(@NotNull ChatBotParser.ProperNounContext ctx) { }
+	@Override public void enterLine(@NotNull ChatBotParser.LineContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitProperNoun(@NotNull ChatBotParser.ProperNounContext ctx) { }
+	@Override public void exitLine(@NotNull ChatBotParser.LineContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
@@ -108,26 +82,13 @@ public class ChatBotBaseListener implements ChatBotListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLine(@NotNull ChatBotParser.LineContext ctx) { }
+	@Override public void enterNominal(@NotNull ChatBotParser.NominalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLine(@NotNull ChatBotParser.LineContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterPp(@NotNull ChatBotParser.PpContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitPp(@NotNull ChatBotParser.PpContext ctx) { }
+	@Override public void exitNominal(@NotNull ChatBotParser.NominalContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
@@ -147,19 +108,6 @@ public class ChatBotBaseListener implements ChatBotListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterNominal(@NotNull ChatBotParser.NominalContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitNominal(@NotNull ChatBotParser.NominalContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterPreposition(@NotNull ChatBotParser.PrepositionContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -167,6 +115,71 @@ public class ChatBotBaseListener implements ChatBotListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitPreposition(@NotNull ChatBotParser.PrepositionContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterProg(@NotNull ChatBotParser.ProgContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitProg(@NotNull ChatBotParser.ProgContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterVerb(@NotNull ChatBotParser.VerbContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitVerb(@NotNull ChatBotParser.VerbContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNoun(@NotNull ChatBotParser.NounContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNoun(@NotNull ChatBotParser.NounContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterProperNoun(@NotNull ChatBotParser.ProperNounContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitProperNoun(@NotNull ChatBotParser.ProperNounContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterPp(@NotNull ChatBotParser.PpContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPp(@NotNull ChatBotParser.PpContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
