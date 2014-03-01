@@ -1,4 +1,4 @@
-package com.cst426.ChatBot;
+package com.cst426.chatbot;
 
 /**
  * Vocabulary.java
@@ -16,14 +16,12 @@ import java.lang.StringBuilder;
 
 public class Vocabulary
 {
-    /**
-     * Each word falls under 5 different classifications
-     */
-    private Map<String, String> _nouns;
-    private Map<String, String> _verbs;
-    private Map<String, String> _pronouns;
-    private Map<String, String> _properNouns;
-    private Map<String, String> _determiners;
+    private Map<String, Word> _nouns;
+    private Map<String, Word> _verbs;
+    private Map<String, Word> _pronouns;
+    private Map<String, Word> _properNouns;
+    private Map<String, Word> _determiners;
+    private Map<String, Word> _prepositions;
 
     /**
      * constructor: initializes all Maps for all different
@@ -31,84 +29,105 @@ public class Vocabulary
      */
     public Vocabulary()
     {
-        _nouns = new HashMap<String, String>();
-        _verbs = new HashMap<String, String>();
-        _pronouns = new HashMap<String, String>();
-        _properNouns = new HashMap<String, String>();
-        _determiners = new HashMap<String, String>();
+        _nouns = new HashMap<String, Word>();
+        _verbs = new HashMap<String, Word>();
+        _pronouns = new HashMap<String, Word>();
+        _properNouns = new HashMap<String, Word>();
+        _determiners = new HashMap<String, Word>();
+        _prepositions = new HashMap<String, Word>();
     }
 
     /**
      * addNoun(): add a noun and its definition to the collection
      * of nouns
-     * @param noun to be added to the verb map
-     * @param def for the verb
+     *
+     * @param key word field of Word object
+     * @param val Word object
      */
-    public void addNoun(String noun, String def)
+    public void addNoun(String key, Word val)
     {
-        _nouns.put(noun, def);
+        _nouns.put(key, val);
     }
 
     /**
      * addVerb(): add a verb and its definition to the collection
      * of verbs
-     * @param verb to be added to the the verb map
-     * @param def for the verb
+     *
+     * @param key word field of Word object
+     * @param val Word object
      */
-    public void addVerb(String verb, String def)
+    public void addVerb(String key, Word val)
     {
-        _verbs.put(verb, def);
+        _verbs.put(key, val);
     }
 
     /**
      * addPronoun(): add pronoun and its definition to the collection
      * of pronouns
-     * @param pronoun to be added to the pronoun map
-     * @param def for the pronoun
+     *
+     * @param key word field of Word object
+     * @param val Word object
      */
-    public void addPronoun(String pronoun, String def)
+    public void addPronoun(String key, Word val)
     {
-        _pronouns.put(pronoun, def);
+        _pronouns.put(key, val);
     }
 
     /**
      * addProperNoun(): add proper noun and its definition to the collection
      * of proper nouns
-     * @param properNoun to be added to the properNoun map
-     * @param def for the properNoun
+     *
+     * @param key word field of Word object
+     * @param val Word Object
      */
-    public void addProperNoun(String properNoun, String def)
+    public void addProperNoun(String key, Word val)
     {
-        _properNouns.put(properNoun, def);
+        _properNouns.put(key, val);
     }
 
     /**
-     * addDeterminer(): add determiner and its definitino to the collection
+     * addDeterminer(): add determiner and its definition to the collection
      * of determiners
-     * @param determiner to be added to the determiner map
-     * @param def for the determiner
+     *
+     * @param key word field of Word object
+     * @param val Word object
      */
-    public void addDeterminer(String determiner, String def)
+    public void addDeterminer(String key, Word val)
     {
-        _determiners.put(determiner, def);
+        _determiners.put(key, val);
+    }
+
+    /**
+     * addPreposition(): add preposition and its definition to the collection
+     * of prepositions
+     *
+     * @param key word field of Word object
+     * @param val Word object
+     */
+    public void addPreposition(String key, Word val)
+    {
+        _prepositions.put(key, val);
     }
 
     /**
      * inVocabulary(): given a word, determine if it is in our vocabulary
+     *
      * @param word we want to search for
      * @return boolean
      */
     public boolean inVocabulary(String word)
     {
         return _nouns.containsKey(word) ||
-               _verbs.containsKey(word) ||
-               _pronouns.containsKey(word) ||
-               _properNouns.containsKey(word) ||
-               _determiners.containsKey(word);
+                _verbs.containsKey(word) ||
+                _pronouns.containsKey(word) ||
+                _properNouns.containsKey(word) ||
+                _determiners.containsKey(word) ||
+                _prepositions.containsKey(word);
     }
 
     /**
      * toString(): returns String representation of the vocabulary
+     *
      * @return String
      */
     @Override
@@ -147,14 +166,15 @@ public class Vocabulary
 
     /**
      * mapToString(): convert a map to a string
+     *
      * @param sb reference to string builder
      * @param hm reference to our Map<String, String>
      */
-    private void mapToString(StringBuilder sb, Map<String, String> hm)
+    private void mapToString(StringBuilder sb, Map<String, Word> hm)
     {
-        for ( Map.Entry entry : hm.entrySet() )
+        for (Map.Entry entry : hm.entrySet())
         {
-            sb.append( entry.getKey () );
+            sb.append(entry.getKey());
             sb.append("\n");
         }
 

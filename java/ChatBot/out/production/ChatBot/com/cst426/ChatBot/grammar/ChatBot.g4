@@ -1,7 +1,7 @@
 grammar ChatBot;
 
 /**
- * Grammar rules
+ * grammar rules
  */
 
 prog
@@ -9,8 +9,8 @@ prog
     ;
 
 line
-	: sentence EOL
-	;
+    : sentence EOL
+    ;
 
 sentence
     : np vp
@@ -18,77 +18,77 @@ sentence
 
 np
     : pronoun
-	| properNoun
-	| det nominal
-	;
+    | properNoun
+    | det nominal
+    ;
 
 nominal
-	: noun nominal
-	| noun
-	;
+    : noun nominal
+    | noun
+    ;
 
 vp
-	: verb
-	| verb np
-	| verb np pp
-	| verb pp
-	;
+    : verb
+    | verb np
+    | verb np pp
+    | verb pp
+    ;
 
 pp
-	: preposition np
-	;
+    : preposition np
+    ;
 
 pronoun
-	: I
-	| YOU
-	| HE
-	| SHE
-	| THEY
-	| IT
-	;
+    : I
+    | YOU
+    | HE
+    | SHE
+    | THEY
+    | IT
+    ;
 
 properNoun
-	: JACOB
-	| DUSTIN
-	| DYLAN
-	| BOT
-	;
+    : JACOB
+    | DUSTIN
+    | DYLAN
+    | BOT
+    ;
 
 preposition
-	: IN
-	| ON
-	| FOR
-	| TO
-	| BY
-	| WITH
-	| AT
-	| OF
-	| FROM
-	| AS
-	;
+    : IN
+    | ON
+    | FOR
+    | TO
+    | BY
+    | WITH
+    | AT
+    | OF
+    | FROM
+    | AS
+    ;
 
 det
-	: THE
-	| ALL
-	| A
-	| SOME
-	| WHICH
-	| THIS
-	| THAT
-	| BOTH
-	| MY
-	| YOUR
-	;
+    : THE
+    | ALL
+    | A
+    | SOME
+    | WHICH
+    | THIS
+    | THAT
+    | BOTH
+    | MY
+    | YOUR
+    ;
 
 verb
-	: EAT
-	| LIKE
-	;
+    : EAT
+    | LIKE
+    ;
 
 noun
-	: PIZZA
-	| SCHOOL
-	;
+    : PIZZA
+    | SCHOOL
+    ;
 
 
 /*

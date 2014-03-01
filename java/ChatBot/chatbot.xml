@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<project name="com.cst426.ChatBot" basedir=".">
+<project name="com.cst426.chatbot" basedir=".">
     <description>
         Provides tasks for automatically downloading the correct version of ANTLR 4 and generating code from grammars
         during the IntelliJ build. The tasks are triggered by the IntelliJ build system and not meant for direct
@@ -110,7 +110,7 @@
         <echo message="Generating ANTLR 4 grammars:${line.separator}  ${echo.sources.antlr4}"/>
 
         <parallel threadsperprocessor="1" failonany="true">
-            <antlr4 srcpath="com/cst426/ChatBot">
+            <antlr4 srcpath="com/cst426/chatbot/grammar">
                 <args>
                     <arg value="-visitor"/>
                 </args>

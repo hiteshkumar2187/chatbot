@@ -1,5 +1,5 @@
 // Generated from ChatBot.g4 by ANTLR 4.2
-package com.cst426.ChatBot;
+package com.cst426.chatbot.grammar;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 

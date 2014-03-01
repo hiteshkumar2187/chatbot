@@ -1,4 +1,4 @@
-package com.cst426.ChatBot;
+package com.cst426.chatbot.grammar;
 
 /**
  * ChatBotExprVisitor.java
@@ -9,22 +9,27 @@ package com.cst426.ChatBot;
  * @author Dylan Gleason, dgleason8384 -at- gmail -dot- com
  */
 
+import com.cst426.chatbot.Word;
+import com.cst426.chatbot.Vocabulary;
+
 public class ChatBotExprVisitor extends ChatBotBaseVisitor<String>
 {
-    private DataStore _dataStore;
+    private Vocabulary _vocabulary;
 
     /**
-     * constructor - binds the datastore to this object
-     * @param dataStore reference
+     * constructor - binds the vocabulary reference to this object
+     *
+     * @param vocabulary reference to Vocabulary object
      */
-    public ChatBotExprVisitor(DataStore dataStore)
+    public ChatBotExprVisitor(Vocabulary vocabulary)
     {
-        _dataStore = dataStore;
+        _vocabulary = vocabulary;
     }
 
     /**
      * visitVerb(): visits a tree node containing a verb and adds
      * it to the data store
+     *
      * @param ctx the current node in the parse tree
      * @return String dummy string
      */
@@ -33,9 +38,9 @@ public class ChatBotExprVisitor extends ChatBotBaseVisitor<String>
     {
         String word = ctx.getText();
 
-        if ( !_dataStore.getVocabulary().inVocabulary(word) )
+        if (!_vocabulary.inVocabulary(word))
         {
-            _dataStore.getVocabulary().addVerb(word, "");
+            _vocabulary.addVerb(word, new Word(word, "", "verb"));
         }
 
         return "";
@@ -44,6 +49,7 @@ public class ChatBotExprVisitor extends ChatBotBaseVisitor<String>
     /**
      * visitNoun(): visits a tree node containing a noun and adds
      * it to the data store
+     *
      * @param ctx the current node in the parse tree
      * @return String dummy string
      */
@@ -52,9 +58,9 @@ public class ChatBotExprVisitor extends ChatBotBaseVisitor<String>
     {
         String word = ctx.getText();
 
-        if ( !_dataStore.getVocabulary().inVocabulary(word) )
+        if (!_vocabulary.inVocabulary(word))
         {
-            _dataStore.getVocabulary().addNoun(word, "");
+            _vocabulary.addNoun(word, new Word(word, "", "noun"));
         }
 
         return "";
@@ -63,6 +69,7 @@ public class ChatBotExprVisitor extends ChatBotBaseVisitor<String>
     /**
      * visitPronoun(): visits a tree node containing a pronoun and adds
      * it to the data store
+     *
      * @param ctx the current node in the parse tree
      * @return String dummy string
      */
@@ -71,9 +78,9 @@ public class ChatBotExprVisitor extends ChatBotBaseVisitor<String>
     {
         String word = ctx.getText();
 
-        if (!_dataStore.getVocabulary().inVocabulary(word) )
+        if (!_vocabulary.inVocabulary(word))
         {
-            _dataStore.getVocabulary().addPronoun(word, "");
+            _vocabulary.addPronoun(word, new Word(word, "", "pronoun"));
         }
 
         return "";
@@ -82,6 +89,7 @@ public class ChatBotExprVisitor extends ChatBotBaseVisitor<String>
     /**
      * visitProperNoun(): visits a tree node containing a properNoun and adds
      * it to the data store
+     *
      * @param ctx the current node in the parse tree
      * @return String dummy string
      */
@@ -90,9 +98,9 @@ public class ChatBotExprVisitor extends ChatBotBaseVisitor<String>
     {
         String word = ctx.getText();
 
-        if ( !_dataStore.getVocabulary().inVocabulary(word) )
+        if (!_vocabulary.inVocabulary(word))
         {
-            _dataStore.getVocabulary().addProperNoun(word, "");
+            _vocabulary.addProperNoun(word, new Word(word, "", "properNoun"));
         }
 
         return "";
@@ -101,6 +109,7 @@ public class ChatBotExprVisitor extends ChatBotBaseVisitor<String>
     /**
      * visitDet(): visits a tree node containing a determiner and adds it
      * to the data store
+     *
      * @param ctx the current node in the parse tree
      * @return String dummy string
      */
@@ -109,9 +118,29 @@ public class ChatBotExprVisitor extends ChatBotBaseVisitor<String>
     {
         String word = ctx.getText();
 
-        if ( !_dataStore.getVocabulary().inVocabulary(word) )
+        if (!_vocabulary.inVocabulary(word))
         {
-            _dataStore.getVocabulary().addDeterminer(word, "");
+            _vocabulary.addDeterminer(word, new Word(word, "", "determiner"));
+        }
+
+        return "";
+    }
+
+    /**
+     * visitPreposition(): visits a tree node containing a determiner and adds it
+     * to the data store
+     *
+     * @param ctx the current node in the parse tree
+     * @return String dummy string
+     */
+    @Override
+    public String visitPreposition(ChatBotParser.PrepositionContext ctx)
+    {
+        String word = ctx.getText();
+
+        if (!_vocabulary.inVocabulary(word))
+        {
+            _vocabulary.addPreposition(word, new Word(word, "", "preposition"));
         }
 
         return "";
