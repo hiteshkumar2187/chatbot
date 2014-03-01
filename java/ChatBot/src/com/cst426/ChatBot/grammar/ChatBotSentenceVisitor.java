@@ -1,7 +1,7 @@
 package com.cst426.chatbot.grammar;
 
 /**
- * ChatBotExprVisitor.java
+ * ChatBotSentenceVisitor.java
  *
  * Extends ChatBotBaseVisitor -- will look for tokens based on parts of
  * speech during the parse and will add them to the data store
@@ -12,7 +12,7 @@ package com.cst426.chatbot.grammar;
 import com.cst426.chatbot.Word;
 import com.cst426.chatbot.Vocabulary;
 
-public class ChatBotExprVisitor extends ChatBotBaseVisitor<String>
+public class ChatBotSentenceVisitor extends ChatBotBaseVisitor<String>
 {
     private Vocabulary _vocabulary;
 
@@ -21,7 +21,7 @@ public class ChatBotExprVisitor extends ChatBotBaseVisitor<String>
      *
      * @param vocabulary reference to Vocabulary object
      */
-    public ChatBotExprVisitor(Vocabulary vocabulary)
+    public ChatBotSentenceVisitor(Vocabulary vocabulary)
     {
         _vocabulary = vocabulary;
     }

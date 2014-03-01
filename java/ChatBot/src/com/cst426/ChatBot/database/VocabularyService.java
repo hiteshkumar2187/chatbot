@@ -9,13 +9,14 @@ package com.cst426.chatbot.database;
  * @author Dylan Gleason, dgleason8384 -at- gmail -dot- com
  */
 
-import java.sql.*;
 import java.util.Map;
 import java.util.HashMap;
+import java.sql.Connection;
+import java.sql.SQLException;
 
 import com.cst426.chatbot.Word;
 
-public class VocabularyService extends Connection
+public class VocabularyService
 {
     /**
      * saveWord(): given a reference to Word object instance,
@@ -25,11 +26,11 @@ public class VocabularyService extends Connection
      */
     public static void saveWord(Word word)
     {
-        // TODO - implement the saveWord method
+        Connection connection = null;
 
         try
         {
-            Connection.init();
+            connection = ChatBotConnection.getConnection();
 
             /**
              * INSERT chatbot.vocabulary (word, type, definition)
@@ -39,8 +40,7 @@ public class VocabularyService extends Connection
         }
         finally
         {
-
-            Connection.close();
+            ChatBotConnection.closeConnection(connection);
         }
     }
 
@@ -54,21 +54,21 @@ public class VocabularyService extends Connection
      */
     public static Map<String, Word> loadWords(String type)
     {
-        // TODO - implement the loadWords method
+        Connection connection = null;
 
         try
         {
-            Connection.init();
+            connection = ChatBotConnection.getConnection();
 
             /**
-             * SELECT * FROM chatbot.vocabulary
+             * SELECT word, type, definition
+             * FROM chatbot.vocabulary
              * WHERE type = {type};
              */
-
         }
         finally
         {
-            Connection.close();
+            ChatBotConnection.closeConnection(connection);
         }
 
         return new HashMap<String, Word>();

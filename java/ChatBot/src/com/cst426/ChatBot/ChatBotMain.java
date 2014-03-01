@@ -78,7 +78,7 @@ public class ChatBotMain
 
         Knowledge knowledge = new Knowledge();
 
-        ChatBotExprVisitor visitor = new ChatBotExprVisitor(knowledge.getVocabulary());
+        ChatBotSentenceVisitor visitor = new ChatBotSentenceVisitor(knowledge.getVocabulary());
 
         visitor.visit(tree);
 

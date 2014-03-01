@@ -26,32 +26,12 @@ public class Word
     }
 
     /**
-     * getWord(): getter for the word
-     *
-     * @return String
+     * Word member Getters
      */
-    public String getWord()
-    {
-        return _word;
-    }
 
-    /**
-     * getDefinition(): getter for the definition
-     *
-     * @return String
-     */
-    public String getDefinition()
-    {
-        return _definition;
-    }
+    public String getWord() { return _word; }
 
-    /**
-     * getType(): getter for the part of speech
-     *
-     * @return String
-     */
-    public String getType()
-    {
-        return _type;
-    }
+    public String getDefinition() { return _definition; }
+
+    public String getType() { return _type; }
 }
