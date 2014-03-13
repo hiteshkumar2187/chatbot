@@ -117,7 +117,7 @@ public class Vocabulary
      */
     public boolean inVocabulary(String word)
     {
-        return _nouns.containsKey(word) ||
+        return  _nouns.containsKey(word) ||
                 _verbs.containsKey(word) ||
                 _pronouns.containsKey(word) ||
                 _properNouns.containsKey(word) ||

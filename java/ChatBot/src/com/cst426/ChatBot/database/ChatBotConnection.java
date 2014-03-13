@@ -10,35 +10,40 @@ package com.cst426.chatbot.database;
  */
 
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.sql.DriverManager;
 
 public class ChatBotConnection
 {
-    // the name of our database
-    protected static final String _dbName = "chatbot";
-
+    // authentication details for the database
+    private static final String _dbName   = "chatbot";
+    private static final String _username = "root";
+    private static final String _password = "password";
+    
     /**
      * getConnection(): returns a reference to the Connection object for the
      * chatbot database
      *
      * @return java.sql.Connection
      */
-    protected static final Connection getConnection()
+    protected static Connection getConnection()
     {
         Connection connection = null;
 
         try
         {
+            // Load Connector/J
+            Class.forName("com.mysql.jdbc.Driver");
+
+            // Get the MySQL connection passing the URL, username and password
             connection = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/" + _dbName,
-                    "root",
-                    "password"
+                    _username,
+                    _password
             );
         }
-        catch (SQLException e)
+        catch (Exception e)
         {
-            System.out.println("ERROR: couldn't connect to database \"" + _dbName + "\"");
+            System.out.println("Error connecting to database \"" + _dbName + "\"");
             e.printStackTrace();
         }
 
@@ -51,15 +56,15 @@ public class ChatBotConnection
      *
      * @param connection reference to Connection object
      */
-    protected static final void closeConnection(Connection connection)
+    protected static void closeConnection(Connection connection)
     {
         try
         {
             connection.close();
         }
-        catch (SQLException e)
+        catch (Exception e)
         {
-            System.out.println("ERROR: couldn't close database \"" + _dbName + "\"");
+            System.out.println("Error closing database \"" + _dbName + "\"");
             e.printStackTrace();
         }
     }

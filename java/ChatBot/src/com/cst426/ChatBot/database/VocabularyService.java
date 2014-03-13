@@ -12,7 +12,6 @@ package com.cst426.chatbot.database;
 import java.util.Map;
 import java.util.HashMap;
 import java.sql.Connection;
-import java.sql.SQLException;
 
 import com.cst426.chatbot.Word;
 
@@ -38,6 +37,11 @@ public class VocabularyService
              */
 
         }
+        catch (Exception e)
+        {
+            System.out.println("Error writing words to database");
+            e.printStackTrace();
+        }
         finally
         {
             ChatBotConnection.closeConnection(connection);
@@ -52,7 +56,7 @@ public class VocabularyService
      * @param type the type of word, e.g. "noun"
      * @return a Map<String, Word> collection
      */
-    public static Map<String, Word> loadWords(String type)
+    public static Map<String, Word> loadWords(String type) throws Exception
     {
         Connection connection = null;
 
@@ -65,6 +69,11 @@ public class VocabularyService
              * FROM chatbot.vocabulary
              * WHERE type = {type};
              */
+        }
+        catch (Exception e)
+        {
+            System.out.println("Error loading words from database");
+            e.printStackTrace();
         }
         finally
         {

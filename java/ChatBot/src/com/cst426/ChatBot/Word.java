@@ -2,7 +2,7 @@ package com.cst426.chatbot;
 
 /**
  * Word.java
- * <p/>
+ *
  * Vocabulary word implements the Model interface
  *
  * @author Dylan Gleason, dgleason8384 -at- gmail -dot- com
@@ -28,7 +28,6 @@ public class Word
     /**
      * Word member Getters
      */
-
     public String getWord() { return _word; }
 
     public String getDefinition() { return _definition; }
