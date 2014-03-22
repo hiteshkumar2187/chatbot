@@ -53,45 +53,18 @@ public class ChatBotMain
             System.exit(1);
         }
 
-        ANTLRInputStream input = new ANTLRInputStream(is);
-
-        ChatBotLexer lexer = new ChatBotLexer(input);
-
-        CommonTokenStream originalTokens = new CommonTokenStream(lexer);
-
-        // We then want to lookup each token in the dictionary and see which part of
+        // We  want to lookup each token in the dictionary and see which part of
         // speech they correspond to, e.g. noun, verb, etc. We then use our generic
         // token NOUN, VERB, etc., in place of the actual tokens and then supply
         // those to the ChatBotParser.
 
-        List<String> buffer = new ArrayList<String> ();
-        Vocabulary vocab = new Vocabulary();
-
-        List<Token> list = originalTokens.getTokens();
-
         /*
-        for (int i = 0; i < length; ++i)
-        {
-            // look up up the current token in the vocabulary
-            Word word = null;
+        ANTLRInputStream input = new ANTLRInputStream(is);
 
-            String key = originalTokens.get(i).toString();
+        ChatBotLexer lexer = new ChatBotLexer(input);
 
-            word = vocab.lookupWord(key);
+        CommonTokenStream tokens = new CommonTokenStream(lexer);
 
-            if (word != null)
-            {
-                buffer.add( word.getType() );
-            }
-        }
-        */
-
-        for (String s : buffer)
-        {
-            System.out.println(s);
-        }
-
-        /*
         ChatBotParser parser = new ChatBotParser(tokens);
 
         ParseTree tree = parser.prog();
@@ -100,5 +73,9 @@ public class ChatBotMain
 
         visitor.visit(tree);
         */
+
+        Vocabulary vocab = new Vocabulary();
+
+        System.out.println(vocab.toString());
     }
 }

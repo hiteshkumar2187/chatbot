@@ -123,6 +123,9 @@ public class VocabularyService
 
             ResultSet result = sql.executeQuery();
 
+            // instantiate the HashMap
+            words = new HashMap<String, Word> ();
+
             // populate each result into our Map of words
             while ( result.next() )
             {
@@ -130,9 +133,6 @@ public class VocabularyService
                 String w = result.getString("word");
                 String t = result.getString("type");
                 String d = result.getString("definition");
-
-                // instantiate the HashMap
-                words = new HashMap <String, Word>();
 
                 // put the word in our map
                 words.put(w, new Word(w, t, d));

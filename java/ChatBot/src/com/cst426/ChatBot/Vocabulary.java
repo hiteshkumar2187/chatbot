@@ -12,7 +12,6 @@ package com.cst426.chatbot;
 
 
 import java.util.Map;
-import java.util.HashMap;
 import java.lang.StringBuilder;
 
 import com.cst426.chatbot.database.VocabularyService;
@@ -103,25 +102,15 @@ public class Vocabulary
         // concatenate all nouns to the string
         sb.append("Words\n");
         sb.append(header);
-        this.mapToString(sb, _words);
 
-        return sb.toString();
-    }
-
-    /**
-     * mapToString(): convert a map to a string
-     *
-     * @param sb reference to string builder
-     * @param hm reference to our Map<String, String>
-     */
-    private void mapToString(StringBuilder sb, Map<String, Word> hm)
-    {
-        for (Map.Entry entry : hm.entrySet())
+        for (Map.Entry entry : _words.entrySet())
         {
             sb.append(entry.getKey());
             sb.append("\n");
         }
 
         sb.append("\n");
+
+        return sb.toString();
     }
 }
