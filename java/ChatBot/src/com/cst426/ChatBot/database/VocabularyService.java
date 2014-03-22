@@ -58,14 +58,55 @@ public class VocabularyService
     }
 
     /**
+     * loadWord(): lookup the word by primary key and return the word if found
+     *
+     * @param key the word as a string
+     */
+    public static Word loadWord(String key) throws Exception
+    {
+        Connection connection = null;
+        Word word = null;
+
+        try
+        {
+            connection = ChatBotConnection.getConnection();
+
+            // prepare the SQL query
+            PreparedStatement sql = connection.prepareStatement(
+                    "SELECT * " +
+                    "FROM vocabulary " +
+                    "WHERE word = ?"
+            );
+
+            ResultSet result = sql.executeQuery();
+
+            result.next();
+
+            return new Word(
+                    result.getString("word"),
+                    result.getString("type"),
+                    result.getString("definition")
+                    );
+        }
+        catch (Exception e)
+        {
+            // the client will handle the exception
+            throw e;
+        }
+        finally
+        {
+            ChatBotConnection.closeConnection(connection);
+        }
+    }
+
+    /**
      * loadWords(): given a String representing the type of word,
      * query the vocabulary table in our database and load in all words
      * corresponding to that type
      *
-     * @param type the type of word, e.g. "noun"
      * @return a Map<String, Word> collection
      */
-    public static Map<String, Word> loadWords(String type) throws Exception
+    public static Map<String, Word> loadWords() throws Exception
     {
         Connection connection = null;
         Map <String, Word> words = null;
@@ -77,11 +118,9 @@ public class VocabularyService
             // set the variable with the prepared statement
             PreparedStatement sql = connection.prepareStatement(
                     "SELECT * " +
-                    "FROM vocabulary " +
-                    "WHERE type = ?"
+                    "FROM vocabulary"
             );
 
-            sql.setString(1, type);
             ResultSet result = sql.executeQuery();
 
             // populate each result into our Map of words

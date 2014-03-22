@@ -43,7 +43,7 @@ public class ChatBotSentenceVisitor extends ChatBotBaseVisitor<String>
 
         if (!_vocabulary.inVocabulary(word))
         {
-            _vocabulary.addVerb(word, new Word(word, Word.VERB, ""));
+            _vocabulary.addWord(word, new Word(word, Word.VERB, ""));
         }
 
         return "";
@@ -66,7 +66,7 @@ public class ChatBotSentenceVisitor extends ChatBotBaseVisitor<String>
 
         if (!_vocabulary.inVocabulary(word))
         {
-            _vocabulary.addNoun(word, new Word(word, Word.NOUN, ""));
+            _vocabulary.addWord(word, new Word(word, Word.NOUN, ""));
         }
 
         return "";
@@ -89,7 +89,7 @@ public class ChatBotSentenceVisitor extends ChatBotBaseVisitor<String>
 
         if (!_vocabulary.inVocabulary(word))
         {
-            _vocabulary.addPronoun(word, new Word(word, Word.PRONOUN, ""));
+            _vocabulary.addWord(word, new Word(word, Word.PRONOUN, ""));
         }
 
         return "";
@@ -112,7 +112,7 @@ public class ChatBotSentenceVisitor extends ChatBotBaseVisitor<String>
 
         if (!_vocabulary.inVocabulary(word))
         {
-            _vocabulary.addProperNoun(word, new Word(word, Word.PROPER_NOUN, ""));
+            _vocabulary.addWord(word, new Word(word, Word.PROPER_NOUN, ""));
         }
 
         return "";
@@ -135,7 +135,7 @@ public class ChatBotSentenceVisitor extends ChatBotBaseVisitor<String>
 
         if (!_vocabulary.inVocabulary(word))
         {
-            _vocabulary.addDeterminer(word, new Word(word, Word.DETERMINER, ""));
+            _vocabulary.addWord(word, new Word(word, Word.DETERMINER, ""));
         }
 
         return "";
@@ -158,7 +158,7 @@ public class ChatBotSentenceVisitor extends ChatBotBaseVisitor<String>
 
         if (!_vocabulary.inVocabulary(word))
         {
-            _vocabulary.addPreposition(word, new Word(word, Word.PREPOSITION, ""));
+            _vocabulary.addWord(word, new Word(word, Word.PREPOSITION, ""));
         }
 
         return "";

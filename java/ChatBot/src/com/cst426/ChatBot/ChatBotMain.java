@@ -64,16 +64,31 @@ public class ChatBotMain
         // token NOUN, VERB, etc., in place of the actual tokens and then supply
         // those to the ChatBotParser.
 
+        List<String> buffer = new ArrayList<String> ();
         Vocabulary vocab = new Vocabulary();
 
-        for (int i = 0; i < originalTokens.size(); ++i)
+        List<Token> list = originalTokens.getTokens();
+
+        /*
+        for (int i = 0; i < length; ++i)
         {
             // look up up the current token in the vocabulary
             Word word = null;
 
             String key = originalTokens.get(i).toString();
 
-            word = vocab.lookupNoun(key);
+            word = vocab.lookupWord(key);
+
+            if (word != null)
+            {
+                buffer.add( word.getType() );
+            }
+        }
+        */
+
+        for (String s : buffer)
+        {
+            System.out.println(s);
         }
 
         /*

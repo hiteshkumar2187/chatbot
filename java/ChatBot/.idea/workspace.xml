@@ -64,10 +64,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ChatBotMain.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ChatBotMain.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/ChatBotMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="41" selection-start="2076" selection-end="2076" vertical-scroll-proportion="0.0" vertical-offset="461" max-vertical-offset="1290">
+            <state line="83" column="45" selection-start="2275" selection-end="2275" vertical-scroll-proportion="0.44596443" vertical-offset="919" max-vertical-offset="1650">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1813#1821#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ANTLRInputStream.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/antlr-4.2-complete.jar!/org/antlr/v4/runtime/ANTLRInputStream.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="11" selection-start="1026" selection-end="1026" vertical-scroll-proportion="-5.08" vertical-offset="248" max-vertical-offset="930">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.expr" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.expr">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
               <folding />
             </state>
           </provider>
@@ -76,16 +97,16 @@
       <file leaf-file-name="VocabularyService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/database/VocabularyService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="5" selection-start="1490" selection-end="1490" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1830">
+            <state line="92" column="51" selection-start="2452" selection-end="2452" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2325">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Vocabulary.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Vocabulary.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/Vocabulary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="262" column="13" selection-start="6401" selection-end="6401" vertical-scroll-proportion="0.38328913" vertical-offset="3641" max-vertical-offset="4395">
+            <state line="65" column="51" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1995">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,7 +117,7 @@
       <file leaf-file-name="ChatBot.g4" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/grammar/ChatBot.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="21" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0" vertical-offset="1305" max-vertical-offset="1440">
+            <state line="87" column="21" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
               <folding />
             </state>
           </provider>
@@ -105,8 +126,10 @@
       <file leaf-file-name="ChatBotSentenceVisitor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/grammar/ChatBotSentenceVisitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="7" selection-start="2588" selection-end="2588" vertical-scroll-proportion="0.0" vertical-offset="1826" max-vertical-offset="2580">
-              <folding />
+            <state line="96" column="0" selection-start="2577" selection-end="2577" vertical-scroll-proportion="0.0" vertical-offset="1849" max-vertical-offset="2580">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -114,7 +137,7 @@
       <file leaf-file-name="Word.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/Word.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="31" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="825">
+            <state line="24" column="31" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
               <folding />
             </state>
           </provider>
@@ -123,7 +146,7 @@
       <file leaf-file-name="ChatBotConnection.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/database/ChatBotConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="9" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1155">
+            <state line="42" column="9" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
               <folding />
             </state>
           </provider>
@@ -140,7 +163,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/Sentences.expr" />
-        <option value="$PROJECT_DIR$/test.expr" />
         <option value="$PROJECT_DIR$/src/com/cst426/ChatBot/ChatBotExprVisitor.java" />
         <option value="$PROJECT_DIR$/src/com/cst426/ChatBot/DataStore.java" />
         <option value="$PROJECT_DIR$/src/com/cst426/ChatBot/ChatBot.g4" />
@@ -163,8 +185,9 @@
         <option value="$PROJECT_DIR$/src/com/cst426/chatbot/Word.java" />
         <option value="$PROJECT_DIR$/src/com/cst426/chatbot/grammar/ChatBotSentenceVisitor.java" />
         <option value="$PROJECT_DIR$/src/com/cst426/chatbot/database/VocabularyService.java" />
-        <option value="$PROJECT_DIR$/src/com/cst426/chatbot/Vocabulary.java" />
+        <option value="$PROJECT_DIR$/test.expr" />
         <option value="$PROJECT_DIR$/src/com/cst426/chatbot/ChatBotMain.java" />
+        <option value="$PROJECT_DIR$/src/com/cst426/chatbot/Vocabulary.java" />
       </list>
     </option>
   </component>
@@ -432,7 +455,7 @@
     <configuration default="false" name="ChatBotMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cst426.chatbot.ChatBotMain" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="t.expr" />
+      <option name="PROGRAM_PARAMETERS" value="test.expr" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
@@ -636,6 +659,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992327" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992327" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17310444" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -647,7 +671,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992327" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -685,15 +708,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/Vocabulary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="262" column="13" selection-start="6401" selection-end="6401" vertical-scroll-proportion="0.0" vertical-offset="626" max-vertical-offset="4395">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/grammar/ChatBot.g4">
       <provider selected="true" editor-type-id="text-editor">
         <state line="87" column="21" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0" vertical-offset="1305" max-vertical-offset="1440">
@@ -704,7 +718,9 @@
     <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/grammar/ChatBotSentenceVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="97" column="7" selection-start="2588" selection-end="2588" vertical-scroll-proportion="0.0" vertical-offset="1826" max-vertical-offset="2580">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -735,7 +751,10 @@
     <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/ChatBotMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="13" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1125">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1813#1821#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -766,7 +785,10 @@
     <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/ChatBotMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="67" column="5" selection-start="1969" selection-end="1969" vertical-scroll-proportion="0.0" vertical-offset="990" max-vertical-offset="1125">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1813#1821#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -787,7 +809,10 @@
     <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/ChatBotMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="51" column="43" selection-start="1483" selection-end="1483" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1080">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1813#1821#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -916,11 +941,6 @@
         <state line="6" column="13" selection-start="157" selection-end="157" vertical-scroll-proportion="0.12311901" vertical-offset="0" max-vertical-offset="731" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.expr">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0994695" vertical-offset="0" max-vertical-offset="754" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ChatBot.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="315" />
@@ -931,17 +951,33 @@
         <state line="12" column="0" selection-start="301" selection-end="301" vertical-scroll-proportion="0.2387268" vertical-offset="0" max-vertical-offset="754" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/grammar/ChatBot.g4">
+    <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/Word.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="21" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
+        <state line="24" column="31" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/database/VocabularyService.java">
+    <entry file="file://$PROJECT_DIR$/test.expr">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="5" selection-start="1490" selection-end="1490" vertical-scroll-proportion="0.0" vertical-offset="986" max-vertical-offset="1740">
+        <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/antlr-4.2-complete.jar!/org/antlr/v4/runtime/ANTLRInputStream.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="11" selection-start="1026" selection-end="1026" vertical-scroll-proportion="-5.08" vertical-offset="248" max-vertical-offset="930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/Vocabulary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="51" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1995">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -952,32 +988,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/Word.java">
+    <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/database/VocabularyService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="31" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
+        <state line="92" column="51" selection-start="2452" selection-end="2452" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2325">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/grammar/ChatBot.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="21" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/grammar/ChatBotSentenceVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="7" selection-start="2588" selection-end="2588" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="2580">
-          <folding />
+        <state line="96" column="0" selection-start="2577" selection-end="2577" vertical-scroll-proportion="0.0" vertical-offset="1811" max-vertical-offset="2565">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/ChatBotMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="41" selection-start="2076" selection-end="2076" vertical-scroll-proportion="0.0" vertical-offset="596" max-vertical-offset="1425">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/Vocabulary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="262" column="13" selection-start="6401" selection-end="6401" vertical-scroll-proportion="0.38328913" vertical-offset="3641" max-vertical-offset="4395">
+        <state line="83" column="45" selection-start="2275" selection-end="2275" vertical-scroll-proportion="0.44596443" vertical-offset="919" max-vertical-offset="1650">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1813#1821#0" expanded="true" />
           </folding>
         </state>
       </provider>
