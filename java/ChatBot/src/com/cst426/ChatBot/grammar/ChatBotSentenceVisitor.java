@@ -38,9 +38,12 @@ public class ChatBotSentenceVisitor extends ChatBotBaseVisitor<String>
     {
         String word = ctx.getText();
 
+        // if the chatbot doesn't know the word, add it to the dictionary
+        // without the definition, then ask about it later
+
         if (!_vocabulary.inVocabulary(word))
         {
-            _vocabulary.addVerb(word, new Word(word, "", "verb"));
+            _vocabulary.addVerb(word, new Word(word, Word.VERB, ""));
         }
 
         return "";
@@ -58,9 +61,12 @@ public class ChatBotSentenceVisitor extends ChatBotBaseVisitor<String>
     {
         String word = ctx.getText();
 
+        // if the chatbot doesn't know the word, add it to the dictionary
+        // without the definition, then ask about it later
+
         if (!_vocabulary.inVocabulary(word))
         {
-            _vocabulary.addNoun(word, new Word(word, "", "noun"));
+            _vocabulary.addNoun(word, new Word(word, Word.NOUN, ""));
         }
 
         return "";
@@ -78,9 +84,12 @@ public class ChatBotSentenceVisitor extends ChatBotBaseVisitor<String>
     {
         String word = ctx.getText();
 
+        // if the chatbot doesn't know the word, add it to the dictionary
+        // without the definition, then ask about it later
+
         if (!_vocabulary.inVocabulary(word))
         {
-            _vocabulary.addPronoun(word, new Word(word, "", "pronoun"));
+            _vocabulary.addPronoun(word, new Word(word, Word.PRONOUN, ""));
         }
 
         return "";
@@ -98,9 +107,12 @@ public class ChatBotSentenceVisitor extends ChatBotBaseVisitor<String>
     {
         String word = ctx.getText();
 
+        // if the chatbot doesn't know the word, add it to the dictionary
+        // without the definition, then ask about it later
+
         if (!_vocabulary.inVocabulary(word))
         {
-            _vocabulary.addProperNoun(word, new Word(word, "", "properNoun"));
+            _vocabulary.addProperNoun(word, new Word(word, Word.PROPER_NOUN, ""));
         }
 
         return "";
@@ -118,9 +130,12 @@ public class ChatBotSentenceVisitor extends ChatBotBaseVisitor<String>
     {
         String word = ctx.getText();
 
+        // if the chatbot doesn't know the word, add it to the dictionary
+        // without the definition, then ask about it later
+
         if (!_vocabulary.inVocabulary(word))
         {
-            _vocabulary.addDeterminer(word, new Word(word, "", "determiner"));
+            _vocabulary.addDeterminer(word, new Word(word, Word.DETERMINER, ""));
         }
 
         return "";
@@ -138,9 +153,12 @@ public class ChatBotSentenceVisitor extends ChatBotBaseVisitor<String>
     {
         String word = ctx.getText();
 
+        // if the chatbot doesn't know the word, add it to the dictionary
+        // without the definition, then ask about it later
+
         if (!_vocabulary.inVocabulary(word))
         {
-            _vocabulary.addPreposition(word, new Word(word, "", "preposition"));
+            _vocabulary.addPreposition(word, new Word(word, Word.PREPOSITION, ""));
         }
 
         return "";

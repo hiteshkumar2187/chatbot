@@ -11,7 +11,9 @@ package com.cst426.chatbot.database;
 
 import java.util.Map;
 import java.util.HashMap;
+import java.sql.ResultSet;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 
 import com.cst426.chatbot.Word;
 
@@ -31,15 +33,22 @@ public class VocabularyService
         {
             connection = ChatBotConnection.getConnection();
 
-            /**
-             * INSERT chatbot.vocabulary (word, type, definition)
-             * VALUES (word, type, definition);
-             */
+            PreparedStatement sql = connection.prepareStatement(
+                    "INSERT vocabulary (word, type, definition) " +
+                    "VALUES (?, ?, ?)"
+            );
+
+            System.out.println(sql.toString());
+
+            sql.setString(1, word.getWord());
+            sql.setString(2, word.getType());
+            sql.setString(3, word.getDefinition());
+            sql.executeUpdate();
 
         }
         catch (Exception e)
         {
-            System.out.println("Error writing words to database");
+            System.out.println("Error writing word to database");
             e.printStackTrace();
         }
         finally
@@ -59,16 +68,36 @@ public class VocabularyService
     public static Map<String, Word> loadWords(String type) throws Exception
     {
         Connection connection = null;
+        Map <String, Word> words = null;
 
         try
         {
             connection = ChatBotConnection.getConnection();
 
-            /**
-             * SELECT word, type, definition
-             * FROM chatbot.vocabulary
-             * WHERE type = {type};
-             */
+            // set the variable with the prepared statement
+            PreparedStatement sql = connection.prepareStatement(
+                    "SELECT * " +
+                    "FROM vocabulary " +
+                    "WHERE type = ?"
+            );
+
+            sql.setString(1, type);
+            ResultSet result = sql.executeQuery();
+
+            // populate each result into our Map of words
+            while ( result.next() )
+            {
+                // extract all the words
+                String w = result.getString("word");
+                String t = result.getString("type");
+                String d = result.getString("definition");
+
+                // instantiate the HashMap
+                words = new HashMap <String, Word>();
+
+                // put the word in our map
+                words.put(w, new Word(w, t, d));
+            }
         }
         catch (Exception e)
         {
@@ -80,6 +109,8 @@ public class VocabularyService
             ChatBotConnection.closeConnection(connection);
         }
 
-        return new HashMap<String, Word>();
+        return words;
     }
+
+
 }

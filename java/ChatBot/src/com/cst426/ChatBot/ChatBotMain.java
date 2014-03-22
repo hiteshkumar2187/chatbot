@@ -8,6 +8,8 @@ package com.cst426.chatbot;
  * @author Dylan Gleason, dgleason8384 -at- gmail -dot- com
  */
 
+import java.util.List;
+import java.util.ArrayList;
 import java.io.InputStream;
 import java.io.FileInputStream;
 
@@ -15,18 +17,17 @@ import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
 import com.cst426.chatbot.grammar.*;
 
+import com.cst426.chatbot.Vocabulary;
+
 public class ChatBotMain
 {
     public static void main(String[] args) throws Exception
     {
         String inputFile = null;
 
-        // TODO - replace file input with interactive GUI input
-
-        //
         // Validate whether input file was passed as command line argument,
         // if not then exit program with error message.
-        //
+
         if (args.length > 0)
         {
             inputFile = args[0];
@@ -37,10 +38,9 @@ public class ChatBotMain
             System.exit(1);
         }
 
-        //
         // Create a FileInputStream instance, otherwise throw an error if the
         // filename cannot be found and exit program
-        //
+
         InputStream is = System.in;
 
         try
@@ -57,32 +57,33 @@ public class ChatBotMain
 
         ChatBotLexer lexer = new ChatBotLexer(input);
 
-        CommonTokenStream tokens = new CommonTokenStream(lexer);
+        CommonTokenStream originalTokens = new CommonTokenStream(lexer);
 
-        //
-        // TODO - at this point we should grab the tokens, and save for later
-        //
         // We then want to lookup each token in the dictionary and see which part of
         // speech they correspond to, e.g. noun, verb, etc. We then use our generic
         // token NOUN, VERB, etc., in place of the actual tokens and then supply
         // those to the ChatBotParser.
-        //
 
+        Vocabulary vocab = new Vocabulary();
+
+        for (int i = 0; i < originalTokens.size(); ++i)
+        {
+            // look up up the current token in the vocabulary
+            Word word = null;
+
+            String key = originalTokens.get(i).toString();
+
+            word = vocab.lookupNoun(key);
+        }
+
+        /*
         ChatBotParser parser = new ChatBotParser(tokens);
 
         ParseTree tree = parser.prog();
 
-        //
-        // TODO - Pass original tokens to the Visitor before visiting parse tree
-        //
-
-        Knowledge knowledge = new Knowledge();
-
-        ChatBotSentenceVisitor visitor = new ChatBotSentenceVisitor(knowledge.getVocabulary());
+        ChatBotSentenceVisitor visitor = new ChatBotSentenceVisitor();
 
         visitor.visit(tree);
-
-        // print out the Vocabulary
-        System.out.println(knowledge.getVocabulary().toString());
+        */
     }
 }

@@ -10,12 +10,17 @@ package com.cst426.chatbot;
  * @author Dylan Gleason, dgleason8384 -at- gmail -dot- com
  */
 
+
 import java.util.Map;
 import java.util.HashMap;
 import java.lang.StringBuilder;
 
+import com.cst426.chatbot.database.VocabularyService;
+
+
 public class Vocabulary
 {
+    // properites represent each part of speech
     private Map<String, Word> _nouns;
     private Map<String, Word> _verbs;
     private Map<String, Word> _pronouns;
@@ -24,17 +29,17 @@ public class Vocabulary
     private Map<String, Word> _prepositions;
 
     /**
-     * constructor: initializes all Maps for all different
-     * word classifications
+     * Vocabulary(): constructor initaliazes all parts of speech
+     * and loads all words from the dictionary
      */
     public Vocabulary()
     {
-        _nouns = new HashMap<String, Word>();
-        _verbs = new HashMap<String, Word>();
-        _pronouns = new HashMap<String, Word>();
-        _properNouns = new HashMap<String, Word>();
-        _determiners = new HashMap<String, Word>();
-        _prepositions = new HashMap<String, Word>();
+        this.loadNouns();
+        this.loadVerbs();
+        this.loadPronouns();
+        this.loadProperNouns();
+        this.loadDeterminers();
+        this.loadPrepositions();
     }
 
     /**
@@ -125,6 +130,105 @@ public class Vocabulary
                 _prepositions.containsKey(word);
     }
 
+    public Word lookupNoun(String key)
+    {
+        return lookupWord(_nouns, key);
+    }
+
+    public Word lookupVerb(String key)
+    {
+        return lookupWord(_verbs, key);
+    }
+
+    public Word lookupPronoun(String key)
+    {
+        return lookupWord(_pronouns, key);
+    }
+
+    public Word lookupPreposition(String key)
+    {
+        return lookupWord(_prepositions, key);
+    }
+
+    public Word lookupProperNoun(String key)
+    {
+        return lookupWord(_properNouns, key);
+    }
+
+    public Word lookupDeterminers(String key)
+    {
+        return lookupWord(_determiners, key);
+    }
+
+    private Word lookupWord(Map<String, Word> map, String key)
+    {
+        if( map.containsKey(key) )
+            return map.get(key);
+        return null;
+    }
+
+    private void loadNouns()
+    {
+        _nouns = new HashMap<String, Word>();
+
+        this.loadWords(_nouns, Word.NOUN);
+    }
+
+    private void loadVerbs()
+    {
+        _verbs = new HashMap<String, Word>();
+
+        this.loadWords(_verbs, Word.VERB);
+    }
+
+    private void loadPronouns()
+    {
+        _pronouns = new HashMap<String, Word>();
+
+        this.loadWords(_pronouns, Word.PRONOUN);
+    }
+
+    private void loadProperNouns()
+    {
+        _properNouns = new HashMap<String, Word>();
+
+        this.loadWords(_properNouns, Word.PROPER_NOUN);
+    }
+
+    private void loadDeterminers()
+    {
+        _determiners = new HashMap<String, Word>();
+
+        this.loadWords(_determiners, Word.DETERMINER);
+    }
+
+    private void loadPrepositions()
+    {
+        _prepositions = new HashMap<String, Word>();
+
+        this.loadWords(_determiners, Word.PREPOSITION);
+    }
+
+    /**
+     * loadWords(): given a reference to a Map and a string indicating
+     * the type, load all of the words from the database of that type
+     *
+     * @param map a reference to the HashMap
+     * @param type a string indicating the word type
+     */
+    private void loadWords(Map<String, Word> map, String type)
+    {
+        try
+        {
+            map = VocabularyService.loadWords(type);
+        }
+        catch (Exception e)
+        {
+            System.out.println("Error: could not load words by type " + type);
+            e.printStackTrace();
+        }
+    }
+
     /**
      * toString(): returns String representation of the vocabulary
      *
@@ -139,27 +243,27 @@ public class Vocabulary
         // concatenate all nouns to the string
         sb.append("Nouns\n");
         sb.append(header);
-        mapToString(sb, _nouns);
+        this.mapToString(sb, _nouns);
 
         // concatenate all verbs to the string
         sb.append("Verbs\n");
         sb.append(header);
-        mapToString(sb, _verbs);
+        this.mapToString(sb, _verbs);
 
         // concatenate all pronouns to the string
         sb.append("Pronouns\n");
         sb.append(header);
-        mapToString(sb, _pronouns);
+        this.mapToString(sb, _pronouns);
 
         // concatenate all properNouns to the string
         sb.append("Proper nouns\n");
         sb.append(header);
-        mapToString(sb, _properNouns);
+        this.mapToString(sb, _properNouns);
 
         // concatenate all properNouns to the string
         sb.append("Determiners\n");
         sb.append(header);
-        mapToString(sb, _determiners);
+        this.mapToString(sb, _determiners);
 
         return sb.toString();
     }

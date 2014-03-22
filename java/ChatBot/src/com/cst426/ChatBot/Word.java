@@ -11,26 +11,39 @@ package com.cst426.chatbot;
 
 public class Word
 {
-    private String _word;
-    private String _definition;
-    private String _type;
+    // word type constants
+    public static final String NOUN = "noun";
+    public static final String VERB = "verb";
+    public static final String PRONOUN = "pronoun";
+    public static final String PROPER_NOUN = "properNoun";
+    public static final String PREPOSITION = "preposition";
+    public static final String DETERMINER = "determiner";
 
-    /**
-     * constructor: sets the word, the definition and the part of speech
-     */
-    public Word(String word, String definition, String type)
+    // properties
+    private String _word;
+    private String _type;
+    private String _definition;
+
+    // constructor
+    public Word(String word, String type, String definition)
     {
         _word = word;
-        _definition = definition;
         _type = type;
+        _definition = definition;
     }
 
-    /**
-     * Word member Getters
-     */
-    public String getWord() { return _word; }
+    public String getWord()
+    {
+        return _word;
+    }
 
-    public String getDefinition() { return _definition; }
+    public String getType()
+    {
+        return _type;
+    }
 
-    public String getType() { return _type; }
+    public String getDefinition()
+    {
+        return _definition;
+    }
 }

@@ -39,55 +39,27 @@ pp
     ;
 
 pronoun
-    : I
-    | YOU
-    | HE
-    | SHE
-    | THEY
-    | IT
+    : PRONOUN
     ;
 
 properNoun
-    : JACOB
-    | DUSTIN
-    | DYLAN
-    | BOT
+    : PROPERNOUN
     ;
 
 preposition
-    : IN
-    | ON
-    | FOR
-    | TO
-    | BY
-    | WITH
-    | AT
-    | OF
-    | FROM
-    | AS
+    : PREPOSITION
     ;
 
 det
-    : THE
-    | ALL
-    | A
-    | SOME
-    | WHICH
-    | THIS
-    | THAT
-    | BOTH
-    | MY
-    | YOUR
+    : DETERMINER
     ;
 
 verb
-    : EAT
-    | LIKE
+    : VERB
     ;
 
 noun
-    : PIZZA
-    | SCHOOL
+    : NOUN
     ;
 
 
@@ -95,58 +67,24 @@ noun
  * Lexical Rules
  */
 
-EOL    : '\r' ? '\n' ;
-NUMBER : '[0-9]'+;
-WS     : ' ' -> channel(HIDDEN);
+EOL        : '\r' ? '\n' ;
 
-// pronouns
+NUMBER     : '[0-9]'+;
 
-I      : 'I';
-YOU    : 'You' | 'you';
-HE     : 'He' | 'he';
-SHE    : 'She' | 'she';
-THEY   : 'They' | 'they';
-IT     : 'It' | 'it';
+WS         : ' ' -> channel(HIDDEN);
 
-// proper nouns
+// Lexemes representing parts of speech are just placeholders,
+// used merely to recongize grammatically correct sentence.
+// Semantic analysis will be done via dictionary lookup.
 
-JACOB  : 'Jacob';
-DUSTIN : 'Dustin';
-DYLAN  : 'Dylan';
-BOT    : 'Bot';
+PRONOUN     : 'pronoun';
 
-// prepositions
+PROPERNOUN  : 'properNoun';
 
-IN     : 'in';
-ON     : 'on';
-FOR    : 'for';
-TO     : 'to';
-BY     : 'by';
-WITH   : 'with';
-AT     : 'at';
-OF     : 'of';
-FROM   : 'from';
-AS     : 'as';
+PREPOSITION : 'preposition';
 
-// determiners
+DETERMINER  : 'determiner';
 
-THE    : 'The' | 'the';
-ALL    : 'All' | 'all';
-A      : 'A' | 'a';
-SOME   : 'Some' | 'some';
-WHICH  : 'Which' | 'which';
-THIS   : 'This' | 'this';
-THAT   : 'That' | 'that';
-BOTH   : 'Both' | 'both';
-MY     : 'My' | 'my';
-YOUR   : 'Your' | 'your';
+NOUN        : 'noun';
 
-// nouns
-
-PIZZA  : 'pizza';
-SCHOOL : 'school';
-
-// verbs
-
-EAT    : 'eat';
-LIKE   : 'likes' | 'like';
+VERB        : 'verb';

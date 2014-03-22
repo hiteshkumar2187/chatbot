@@ -15,7 +15,7 @@ import java.sql.DriverManager;
 public class ChatBotConnection
 {
     // authentication details for the database
-    private static final String _dbName   = "chatbot";
+    private static final String _dbName   = "chatbot_db";
     private static final String _username = "root";
     private static final String _password = "password";
     
