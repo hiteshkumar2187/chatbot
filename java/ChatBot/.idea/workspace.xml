@@ -93,10 +93,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VocabularyService.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="VocabularyService.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/database/VocabularyService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="38" selection-start="3364" selection-end="3364" vertical-scroll-proportion="0.0" vertical-offset="1594" max-vertical-offset="2325">
+            <state line="125" column="38" selection-start="3364" selection-end="3364" vertical-scroll-proportion="2.4418604" vertical-offset="0" max-vertical-offset="2325">
               <folding />
             </state>
           </provider>
@@ -122,10 +122,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChatBotSentenceVisitor.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ChatBotSentenceVisitor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/grammar/ChatBotSentenceVisitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="0" selection-start="2577" selection-end="2577" vertical-scroll-proportion="1.9493845" vertical-offset="0" max-vertical-offset="2565">
+            <state line="96" column="0" selection-start="2577" selection-end="2577" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2565">
               <folding />
             </state>
           </provider>
@@ -143,8 +143,10 @@
       <file leaf-file-name="ChatBotConnection.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/database/ChatBotConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="9" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
-              <folding />
+            <state line="14" column="13" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0" vertical-offset="424" max-vertical-offset="1155">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -175,7 +177,6 @@
         <option value="$PROJECT_DIR$/src/com/cst426/chatbot/database/Connection.java" />
         <option value="$PROJECT_DIR$/src/com/cst426/chatbot/grammar/ChatBotExprVisitor.java" />
         <option value="$PROJECT_DIR$/src/com/cst426/chatbot/database/ChatBotService.java" />
-        <option value="$PROJECT_DIR$/src/com/cst426/chatbot/database/ChatBotConnection.java" />
         <option value="$PROJECT_DIR$/sql/chatbot.sql" />
         <option value="$PROJECT_DIR$/src/com/cst426/chatbot/Knowledge.java" />
         <option value="$PROJECT_DIR$/src/com/cst426/chatbot/grammar/ChatBot.g4" />
@@ -185,6 +186,7 @@
         <option value="$PROJECT_DIR$/src/com/cst426/chatbot/database/VocabularyService.java" />
         <option value="$PROJECT_DIR$/src/com/cst426/chatbot/Vocabulary.java" />
         <option value="$PROJECT_DIR$/src/com/cst426/chatbot/ChatBotMain.java" />
+        <option value="$PROJECT_DIR$/src/com/cst426/chatbot/database/ChatBotConnection.java" />
       </list>
     </option>
   </component>
@@ -729,7 +731,9 @@
     <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/database/ChatBotConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="9" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1155">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -989,23 +993,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/grammar/ChatBotSentenceVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="0" selection-start="2577" selection-end="2577" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2565">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/database/ChatBotConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="9" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1155">
-          <folding />
+        <state line="14" column="13" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0" vertical-offset="424" max-vertical-offset="1155">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/database/VocabularyService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="38" selection-start="3364" selection-end="3364" vertical-scroll-proportion="0.0" vertical-offset="1519" max-vertical-offset="2325">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cst426/chatbot/grammar/ChatBotSentenceVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="0" selection-start="2577" selection-end="2577" vertical-scroll-proportion="1.9493845" vertical-offset="0" max-vertical-offset="2565">
+        <state line="125" column="38" selection-start="3364" selection-end="3364" vertical-scroll-proportion="2.4418604" vertical-offset="0" max-vertical-offset="2325">
           <folding />
         </state>
       </provider>
